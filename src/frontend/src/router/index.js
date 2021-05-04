@@ -1,0 +1,44 @@
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+
+Vue.use(VueRouter);
+
+const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/about",
+    name: "About",
+    /* 방문시 로드 
+     * component: () => import(~) */
+    component: () =>
+      import(/* webpackChunkName: "about" */ "@/views/About.vue"),
+  },  
+  {
+    path: "/loginForm",
+    name: "LoginForm",
+    /* 방문시 로드 
+     * component: () => import(~) */
+    component: () =>
+      import("@/views/LoginForm.vue"),
+  },
+  {
+    /* 에러 페이지 */
+    path: "/*",
+    name: "Error",
+    component: () =>
+      import("@/views/Error.vue"),
+  },
+];
+
+const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes,
+});
+
+export default router;
