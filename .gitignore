@@ -33,24 +33,24 @@ build/
 ### VS Code ###
 .vscode/
 
-src/frontend/rolling/.DS_Store
-src/frontend/rolling/node_modules
-src/frontend/rolling/dist
+.DS_Store
+node_modules
+/dist
 
 
 # local env files
-src/frontend/rolling/.env.local
-src/frontend/rolling/.env.*.local
+.env.local
+.env.*.local
 
 # Log files
-src/frontend/rolling/npm-debug.log*
-src/frontend/rolling/yarn-debug.log*
-src/frontend/rolling/yarn-error.log*
-src/frontend/rolling/pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Editor directories and files
-src/frontend/rolling/.idea
-src/frontend/rolling/.vscode
+.idea
+.vscode
 *.suo
 *.ntvs*
 *.njsproj
