@@ -8,8 +8,23 @@ module.exports = {
     parser: "babel-eslint",
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    // "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+    // "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    'no-console': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+          endOfLine: 'auto',
+          singleQuote: true,
+          semi: true,
+          useTabs: true,
+          tabWidth: 2,
+          trailingComma: 'all', 
+          printWidth: 80,
+          bracketSpacing: true, //{} 사이 공백
+          arrowParens: 'avoid',
+      },
+    ],
   },
   overrides: [
     {
